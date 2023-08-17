@@ -1,0 +1,39 @@
+/* move up and down x and y pixels */
+
+/* div {
+    transition: background-color 300ms;
+}
+
+div:hover {
+    background-color: rgba(0,0,0, 0.2);
+}
+
+button {
+    
+    animation: float 2s infinite alternate-reverse;
+    transition: all 300ms;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0)
+    }
+    100% {
+        transform: translateY(10px)
+    }
+} */
+
+
+.nav__link {
+    color: black;       
+}
+
+.nav__link--active {
+    color: purple;
+    font-weight: bold;
+}

@@ -1,0 +1,167 @@
+/* starter code */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:ital,wght@0,300;0,400;0,700;1,500&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+
+/* layout 1 */
+/* make sure boxes have room to move or won't work */
+
+/* .box {
+    border: 4px solid lightgray;
+    width: 100px;
+    height: 100px;
+}
+
+.small-box {
+    border: 4px solid lightgray;
+    width: 50px;
+    height: 50px;
+    margin-left: 24px;
+
+}
+
+.container {
+    border: 4px solid lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+
+.second-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+/* layout 2 */
+/* flex wrap to wrap rows */
+
+/* also use margin: 0 auto to center just like justify-content: center; */
+
+/* * {
+    box-sizing: border-box;
+}
+
+.container {
+    border: 4px solid lightgray;
+    padding: 24px 24px 0 24px;
+}
+
+.row {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.box {
+    border: 4px solid lightgray;
+    width: 30%;
+    height: 100px;
+    margin-bottom: 24px;
+
+}
+
+.title {
+    border: 2px solid lightgray;
+    width: 100%;
+    height: 24px;
+    margin-bottom: 24px;
+}
+
+.threeboxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+} */
+
+/* layout 3 */
+
+/* * {
+    box-sizing: border-box;
+}
+
+.container {
+    border: 4px solid lightgray;
+    padding: 24px 24px 0 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rectangle {
+    border: 4px solid lightgray;
+    margin-bottom: 24px;
+}
+
+.box-stack {
+    width: 45%;
+}
+
+.big-box {
+    border: 4px solid lightgray;
+    width: 45%;
+    margin-bottom: 24px;
+}
+
+.box-small {
+    height: 50px;
+} */
+
+/* layout 4 */
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    border: 4px solid lightgray;
+    
+}
+
+.box {
+    border: 4px solid lightgray;
+    margin-bottom: 24px;
+}
+
+.box-small {
+    height: 50px;
+}
+
+.box-tiny {
+    width: 30%;
+    height: 50px;
+}
+
+.tiny-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-large {
+    width: 45%;
+    margin-top: 24px;
+
+}
+
+.row {
+    border: 4px solid lightgray;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.sub-container {
+    width: 45%;
+    margin-right: 36px;
+    margin-top: 24px;
+}
