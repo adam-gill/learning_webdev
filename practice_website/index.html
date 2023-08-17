@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
   </head>
   <body>
     <section>
       <nav>
-        <img src="./assets/FES.svg" alt="" />
+        <img src="./assets/FES.svg " class="logo" alt="" />
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#discord">Discord</a></li>
@@ -18,73 +19,91 @@
       </nav>
 
       <header>
-        <div>
-          <h1>Best place to learn frontend</h1>
-          <p>
-            Go from being an absolute beginner to a pro with a simplified
-            process
-          </p>
-          <button>Start now</button>
+        <div class="row">
+          <div>
+            <h1>Best place to learn frontend</h1>
+            <p class="subheader">
+              Go from being an absolute beginner to a pro with a simplified
+              process
+            </p>
+            <button>Start now</button>
+          </div>
+          <figure>
+            <img src="./assets/laptop.png" alt="Home page image" />
+          </figure>
         </div>
-        <figure>
-          <img src="./assets/laptop.png" alt="Home page image" />
-        </figure>
       </header>
     </section>
 
     <main>
       <section id="about">
         <h2>About</h2>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-            perspiciatis, eligendi eius veritatis nihil maiores. Minus,
-            consectetur consequuntur. Accusamus, autem.
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui
-            architecto inventore hic labore non, iusto esse et culpa perferendis
-            repellendus!
-          </p>
+        <div class="row">
+          <div class="section__description">
+            <div class="section__description--wrapper">
+              <p class="section__description--para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                perspiciatis, eligendi eius veritatis nihil maiores. Minus,
+                consectetur consequuntur. Accusamus, autem.
+              </p>
+              <p class="section__description--para">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui
+                architecto inventore hic labore non, iusto esse et culpa
+                perferendis repellendus!
+              </p>
+            </div>
+            <figure class="about__img--wrapper">
+              <img src="./assets/about.jpg" alt="about" />
+            </figure>
+          </div>
         </div>
       </section>
       <section id="discord">
         <h2>Discord</h2>
-        <figure>
-          <img src="./assets/discord.png" alt="discord" />
-        </figure>
-        <div>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus
-            dignissimos alias ut doloribus iusto. Quae pariatur impedit
-            recusandae perferendis ipsam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-            quisquam qui voluptas consequuntur quod, dignissimos exercitationem?
-            Fugiat quia sunt numquam.
-          </p>
+        <div class="row">
+          <div class="section__description">
+            <figure>
+              <img src="./assets/discord.png" alt="discord" />
+            </figure>
+            <div>
+              <p class="section__description--para">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus
+                dignissimos alias ut doloribus iusto. Quae pariatur impedit
+                recusandae perferendis ipsam.
+              </p>
+              <p class="section__description--para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+                quisquam qui voluptas consequuntur quod, dignissimos
+                exercitationem? Fugiat quia sunt numquam.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
       <section id="contact">
         <h2>Contact</h2>
         <form action="">
-            <input type="text" placeholder="jane@example.com">
-            <span>Message</span>
-            <textarea type="text" placeholder="Message"></textarea>
+          <span>Email</span>
+          <input type="email" placeholder="jane@example.com" />
+          <span>Message</span>
+          <textarea
+            type="text"
+            placeholder="Cool website, let's get connected"
+          ></textarea>
+          <button>Contact Us!</button>
         </form>
       </section>
     </main>
 
     <footer>
-        <img src="./assets/FES.svg" alt="">
-        <div>
-            <a href="#about">About</a>
-            <a href="#discord">Discord</a>
-            <a href="#contact">Contact</a>
-            <a href="">Courses</a>
-        </div>
-        <p>Copyright Frontend Simplified</p>
+      <img src="./assets/FES.svg" alt="" class="footer__logo" />
+      <div class="footer__links">
+        <a href="#about" class="footer__link">About</a>
+        <a href="#discord" class="footer__link">Discord</a>
+        <a href="#contact" class="footer__link">Contact</a>
+        <a href="" class="footer__link">Courses</a>
+      </div>
+      <p>Copyright Frontend Simplified</p>
     </footer>
   </body>
 </html>
