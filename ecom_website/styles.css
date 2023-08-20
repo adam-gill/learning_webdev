@@ -35,7 +35,23 @@ img {
 }
 
 .logo {
-  width: 160px;
+  width: 40px;
+  padding: 0;
+}
+
+.logo__holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px;
+  margin: 0;
+  border: 1px solid #1769d2;
+  border-radius: 4px;
+}
+
+.logo__text {
+  text-align: center;
+  color: #1769d2;
 }
 
 .blue {
