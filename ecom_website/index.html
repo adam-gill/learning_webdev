@@ -12,35 +12,46 @@
   </head>
   <body>
     <section id="landing">
-      <div class="nav__container">
-        <nav>
+      <nav>
+        <div class="nav__container">
           <div class="logo__holder">
-            <img src="./assets/book.svg" class="logo" alt="">
-            <h5 class="logo__text">e-lib</h3>
+            <a href="#">
+              <img src="./assets/book.svg" class="logo" alt="" />
+            </a>
+            <h5 class="logo__text">e-lib</h5>
           </div>
-          
-
           <ul>
             <li><a href="#" class="nav__link">Home</a></li>
             <li><a href="#" class="nav__link">Contact</a></li>
             <li><a href="#" class="nav__link nav__link--primary">Books</a></li>
           </ul>
-        </nav>
-        <header>
-          <div class="header__container">
-            <div class="header__description">
-              <h1>America's most awarded online library platform</h1>
-              <h2>
-                Find your dream book with <span class="blue">Library</span>
-              </h2>
-              <button class="btn">Browse Books</button>
-            </div>
-            <figure class="header__img--wrapper">
-              <img src="./assets/reading2.svg" alt="" />
-            </figure>
+          <button class="btn__menu">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="menu__backdrop btn__menu--close">
+            <button class="btn__menu btn__menu--close">
+              <i class="fas fa-time"></i>
+            </button>
+            <ul class="menu__links">
+              <li class="menu__list"><a href="#">Home</a></li>
+              <li class="menu__list"><a href="#latest">Books</a></li>
+              <li class="menu__list no-cursor"><a href="">Contact</a></li>
+            </ul>
           </div>
-        </header>
-      </div>
+        </div>
+      </nav>
+      <header>
+        <div class="header__container">
+          <div class="header__description">
+            <h1>America's most awarded online library platform</h1>
+            <h2>Find your dream book with <span class="blue">Library</span></h2>
+            <button class="btn">Browse Books</button>
+          </div>
+          <figure class="header__img--wrapper">
+            <img src="./assets/reading2.svg" alt="" />
+          </figure>
+        </div>
+      </header>
     </section>
 
     <main>
@@ -245,9 +256,7 @@
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star-half-alt"></i>
                 </div>
-                <div class="book__price">
-                  <span class="book__price--normal">$59.95</span> $14.95
-                </div>
+                <div class="book__price">$14.95</div>
               </div>
               <div class="book">
                 <figure class="book__img--wrapper">
@@ -306,11 +315,32 @@
               <h2 class="section__title">
                 Explore More <span class="blue">Books</span>
               </h2>
-              <button class="btn">Explore More Books</button>
+              <a href="#features">
+                <button class="btn">Explore</button>
+              </a>
             </div>
           </div>
         </div>
       </section>
     </main>
+    <footer>
+      <div class="container">
+        <div class="row row__column">
+          <div class="logo__holder--white">
+            <a href="#">
+              <img src="./assets/book2.svg" class="logo white" alt="" />
+            </a>
+            <h5 class="logo__text--white">e-lib</h5>
+          </div>
+          <div class="footer__list">
+            <a href="" class="footer__link">Home</a>
+            <a href="" class="footer__link no-cursor">About</a>
+            <a href="" class="footer__link">Books</a>
+            <a href="" class="footer__link no-cursor">Contact</a>
+          </div>
+          <div class="footer__copyright">Copyright &copy; 2023 e-lib</div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
