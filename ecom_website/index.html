@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="index.js"></script>
     <script
       src="https://kit.fontawesome.com/c8e4d183c2.js"
       crossorigin="anonymous"
@@ -20,22 +21,28 @@
             </a>
             <h5 class="logo__text">e-lib</h5>
           </div>
-          <ul>
+          <ul class="nav__links">
             <li><a href="#" class="nav__link">Home</a></li>
             <li><a href="#" class="nav__link">Contact</a></li>
             <li><a href="#" class="nav__link nav__link--primary">Books</a></li>
           </ul>
-          <button class="btn__menu">
+          <button class="btn__menu" onclick="openMenu()">
             <i class="fas fa-bars"></i>
           </button>
-          <div class="menu__backdrop btn__menu--close">
-            <button class="btn__menu btn__menu--close">
-              <i class="fas fa-time"></i>
+          <div class="menu__backdrop">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+              <i class="fas fa-times"></i>
             </button>
             <ul class="menu__links">
-              <li class="menu__list"><a href="#">Home</a></li>
-              <li class="menu__list"><a href="#latest">Books</a></li>
-              <li class="menu__list no-cursor"><a href="">Contact</a></li>
+              <li class="menu__list">
+                <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
+              </li>
+              <li class="menu__list">
+                <a href="#featured" class="menu__link" onclick="closeMenu()">Books</a>
+              </li>
+              <li class="menu__list">
+                <a class="menu__link no-cursor" onclick="closeMenu()">Contacts</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -45,7 +52,7 @@
           <div class="header__description">
             <h1>America's most awarded online library platform</h1>
             <h2>Find your dream book with <span class="blue">Library</span></h2>
-            <button class="btn">Browse Books</button>
+            <a href="#featured"><button class="btn">Browse Books</button></a>
           </div>
           <figure class="header__img--wrapper">
             <img src="./assets/reading2.svg" alt="" />
@@ -315,7 +322,7 @@
               <h2 class="section__title">
                 Explore More <span class="blue">Books</span>
               </h2>
-              <a href="#features">
+              <a href="#featured">
                 <button class="btn">Explore</button>
               </a>
             </div>
