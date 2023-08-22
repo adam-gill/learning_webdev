@@ -570,6 +570,10 @@ footer {
   #featured:after {
     bottom: -1px;
   }
+
+  .header__description {
+    padding-top: 84px;
+  }
 }
 
 /* PHONES */
