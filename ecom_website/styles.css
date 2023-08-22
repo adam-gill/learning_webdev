@@ -16,7 +16,6 @@ body {
   overflow-x: hidden;
 }
 
-
 nav {
   width: 100%;
   max-width: 1200px;
@@ -100,7 +99,7 @@ li {
 .nav__link--primary {
   border: 2px solid #1769d2;
   background-color: #1769d2;
-  color:white;
+  color: white;
   border-radius: 4px;
 }
 
@@ -351,7 +350,6 @@ a:hover {
   padding-top: 16px;
   font-weight: 400;
   font-size: 18px;
-  
 }
 
 /* FEATURED */
@@ -397,7 +395,6 @@ a:hover {
   max-height: 380px;
   transition: all 300ms ease;
   cursor: no-drop;
-  
 }
 
 .book__img--wrapper {
@@ -448,7 +445,7 @@ a:hover {
 
 #explore {
   margin-top: 8vw;
-  background-color: #6eb5f85d; 
+  background-color: #6eb5f85d;
   position: relative;
   max-width: 100vw;
 }
@@ -466,7 +463,6 @@ a:hover {
   transform: translateY(-100%);
   top: 0px;
 }
-
 
 .explore__container {
   display: flex;
@@ -494,12 +490,10 @@ footer {
 .footer__copyright {
   color: white;
   text-decoration: none;
-
 }
 
 .footer__list {
   margin: 24px;
-
 }
 
 .footer__link {
@@ -510,7 +504,7 @@ footer {
 
 /* PHONES/TABLETS */
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .header__description {
     padding: 0 24px;
   }
@@ -525,7 +519,7 @@ footer {
   }
 
   h2 {
-    font-size: 26px; 
+    font-size: 26px;
   }
 
   button {
@@ -554,7 +548,12 @@ footer {
   }
 }
 
-@media(max-width: 550px) {
+@media (max-width: 550px) {
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
   .nav__links {
     display: none;
   }
@@ -582,4 +581,3 @@ footer {
 }
 
 /* PHONES */
-
