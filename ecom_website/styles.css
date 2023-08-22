@@ -515,6 +515,11 @@ footer {
     padding: 0 24px;
   }
 
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
   h1 {
     font-size: 40px;
   }
