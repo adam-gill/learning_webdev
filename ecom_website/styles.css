@@ -509,11 +509,6 @@ footer {
     padding: 0 24px;
   }
 
-  body {
-    width: 100%;
-    overflow-x: hidden;
-  }
-
   h1 {
     font-size: 40px;
   }
@@ -549,10 +544,6 @@ footer {
 }
 
 @media (max-width: 550px) {
-  body {
-    width: 100%;
-    overflow-x: hidden;
-  }
 
   .nav__links {
     display: none;
@@ -571,12 +562,23 @@ footer {
     margin-bottom: 24px;
   }
 
-  #featured:after {
-    bottom: -1px;
-  }
 
   .header__description {
     margin-top: 64px;
+  }
+
+  #featured:after {
+    bottom: 1px;
+  }
+
+  #explore:before {
+    top: 0px;
+    z-index: 4;
+    mix-blend-mode: inherit;
+  }
+
+  #explore {
+    mix-blend-mode: normal;
   }
 }
 
