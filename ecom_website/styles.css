@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: "JetBrains Mono", monospace;
   font-weight: 700;
+  max-width: 100vw;
 }
 
 html {
@@ -13,6 +14,7 @@ html {
 }
 
 body {
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -183,6 +185,7 @@ li {
 }
 
 .menu__open {
+  max-width: 100%;
   max-height: 20vh;
   overflow: hidden;
 }
@@ -261,6 +264,7 @@ a:hover {
 
 .container {
   padding: 56px 0;
+  width: 100%;
 }
 
 .row {
@@ -292,7 +296,7 @@ a:hover {
   background: url("assets/wave.svg");
   content: "";
   position: absolute;
-  width: 100%;
+  width: 100vw;
   height: 12vw;
   left: 0;
   z-index: 1;
@@ -367,7 +371,7 @@ a:hover {
   background: url("assets/wave2.svg");
   content: "";
   position: absolute;
-  width: 100%;
+  width: 100vw;
   height: 12vw;
   left: 0;
   z-index: 1;
@@ -544,6 +548,11 @@ footer {
 }
 
 @media (max-width: 550px) {
+  
+  body {
+    overflow: hidden;
+    width: 430px;
+  }
 
   .nav__links {
     display: none;
@@ -580,6 +589,8 @@ footer {
   #explore {
     mix-blend-mode: normal;
   }
+
+  
 }
 
 /* PHONES */
