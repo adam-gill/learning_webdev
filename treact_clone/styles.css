@@ -261,6 +261,7 @@ input:hover .email__input-box{
 
 .customers__container {
   margin-top: 5rem;
+  width: 100%;
 }
 
 .customers__para {
@@ -377,7 +378,6 @@ input:hover .email__input-box{
   flex-direction: column;
   justify-content: left;
   width: 45%;
-  margin-right: 1rem;
 }
 
 .margin__top {
@@ -395,6 +395,7 @@ input:hover .email__input-box{
   margin-top: 1rem;
   margin-bottom: 2rem;
   color: #7c8ba1;
+  max-width: 570px;
 }
 
 .learn__more-btn {
@@ -415,8 +416,13 @@ input:hover .email__input-box{
   filter: brightness(80%)
 }
 
-.quality__work-img {
+.quality__img--wrapper {
   width: 50%;
+
+}
+
+.quality__work-img {
+  width: 100%;
   border: 1px solid rgb(226, 232, 240);
   border-radius: 0.25rem;
 }
@@ -424,6 +430,63 @@ input:hover .email__input-box{
 .row__mod2 {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+}
+
+
+
+/* STEPS */
+
+.no__bullets {
+  list-style-type: none;
+}
+
+.step__number {
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #cbd5e0;
+}
+
+.step {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+
+.steps__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1;
+  color: rgb(36, 62, 99);
+}
+
+.steps__description {
+  margin-left: 1.5rem;
+}
+
+.steps__description--para {
+  margin-top: 0.75rem;
+  color: #718096;
+  max-width: 20rem;
+  font-size: 0.875rem; 
+  font-weight: 500;
+  line-height: 2;
+}
+
+.steps__img--wrapper {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.steps__text--container {
+  padding-left: 3rem;
+  width: 50%;
+}
+
+.steps__img {
+  width: 100%;
 }
 
 
@@ -484,4 +547,50 @@ input:hover .email__input-box{
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+
+
+
+/* PATHS / BACKGROUND IMAGES */
+
+.path1 {
+  z-index: -10;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 0px;
+  left: 0px;
+  opacity: 0.05;
+  width: 16rem;
+  height: 16rem;
+  display: block;
+  transform: translate(-55%, 215%);
+}
+
+.path2 {
+  z-index: -10;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  bottom: 0px;
+  right: 0px;
+  opacity: 0.25;
+  width: 16rem;
+  height: 16rem;
+  display: block;
+  transform: translate(35%, 275%);
+}
+
+.path3 {
+  z-index: -10;
+  position: absolute;
+  padding: 0; 
+  margin: 0;
+  bottom: 0px;
+  right: 0px;
+  width: 5rem;
+  height: 5rem;
+  display: block;
+  transform: translate(-340%, 1500%);
 }
