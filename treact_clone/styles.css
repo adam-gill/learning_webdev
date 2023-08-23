@@ -420,7 +420,11 @@ input:hover .email__input-box {
   border-radius: 0.25rem;
 }
 
-/* STEPS */
+
+
+
+
+/* NO ATTRIBUTES */
 
 .no__bullets {
   list-style-type: none;
@@ -429,6 +433,17 @@ input:hover .email__input-box {
 .no__margin {
   margin: 0;
 }
+
+.no-cursor {
+  cursor: not-allowed;
+}
+
+
+
+
+
+
+/* STEPS */
 
 .step__number {
   font-size: 2.25rem;
@@ -937,3 +952,111 @@ input:hover .email__input-box {
   opacity: 0.25;
   transform: translateX(75%) translateY(1425%);
 }
+
+.path6 {
+  color: white;
+}
+
+.path7 {
+  color: white;
+}
+
+
+
+/* FAQS */
+
+.med__margin {
+  margin-bottom: 48px;
+}
+
+.faqs {
+  max-width: 896px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 48px;
+  margin: 0 auto;
+}
+
+.faq {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #edf2f7;
+  padding: 16px 40px;
+  margin-top: 20px;
+  transition: all 300ms ease;
+}
+
+.faq:hover {
+  filter: brightness(95%);
+  cursor: not-allowed;
+}
+
+.faq__holder {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+}
+
+.question {
+  font-size: 20px;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.dropdown__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+/* PREFOOTER */
+
+.prefooter__container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 6.5rem 0;
+  background-color: rgb(100, 21, 255);
+  border-radius: 8px;
+  justify-content: space-around;
+}
+
+.prefooter__text {
+  max-width: 480px;
+}
+
+.prefooter__title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #f7fafc;
+}
+
+.prefooter__btn--getstarted {
+  border: none;
+  border-radius: 9999px;
+  margin-right: 1rem;
+  padding: 20px 40px;
+  color: #f7fafc;
+  background-color: #f56565;
+}
+
+.prefooter__btn--contactus {
+  border: none;
+  border-radius: 9999px;
+  padding: 20px 40px;
+}
+
+
