@@ -13,6 +13,8 @@
 
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -695,7 +697,9 @@ input:hover .email__input-box {
   transition: all 300ms ease-in-out;
 }
 
-.buy__now1:hover, .buy__now2:hover, .buy__now3:hover{
+.buy__now1:hover,
+.buy__now2:hover,
+.buy__now3:hover {
   transform: translateY(-2px) translateX(2px);
   box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.4);
 }
@@ -995,15 +999,17 @@ input:hover .email__input-box {
 }
 
 .path8__container {
-  opacity: 1;
+  
+  opacity: 0.8;
   width: 320px;
   height: 320px;
-  position: absolute;
+  display: block;
   color: #130322;
-  bottom: 0;
-  left: 0;
-  transform: translateY(1890%) translateX(-30%);
-  z-index: 10;
+  top: 0px;
+  left: 0px;
+  transform: translateY(-527px) translateX(-100px);
+  z-index: -10;
+  overflow: hidden;
 }
 
 .path8 {
@@ -1135,7 +1141,8 @@ input:hover .email__input-box {
 
 footer {
   background-color: #6415ff;
-  width: 100vw;
+  width: 100%;
+  max-height: fit-content;
 }
 
 .column__container {
@@ -1145,10 +1152,12 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 36px;
+  z-index: 10;
 }
 
 .column {
   margin-top: 48px;
+  z-index: 10;
 }
 
 .footer__title {
@@ -1212,6 +1221,7 @@ footer {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding: 0 32px;
 }
 
 .legal {
@@ -1265,15 +1275,6 @@ footer {
   justify-content: center;
 }
 
-
-
-
-
-
-
-
-
-
 .menu__backdrop {
   height: 40vh;
   position: absolute;
@@ -1297,20 +1298,12 @@ footer {
   transform: translate(100%);
 }
 
-.menu--open .menu__backdrop{
+.menu--open .menu__backdrop {
   display: flex;
   visibility: visible;
-  opacity: 1; 
+  opacity: 1;
   transform: translate(0);
 }
-
-
-
-
-
-
-
-
 
 /* @media aka RESPONSIVE CSS */
 
@@ -1321,5 +1314,4 @@ footer {
 }
 
 @media (max-width: 768px) {
-
 }
