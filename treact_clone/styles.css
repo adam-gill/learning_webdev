@@ -325,9 +325,11 @@ input:hover .email__input-box {
 }
 
 .services {
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .services__container {
@@ -417,6 +419,8 @@ input:hover .email__input-box {
 }
 
 .quality__img--wrapper {
+  display: flex;
+  align-items: center;
   width: 50%;
 }
 
@@ -572,7 +576,9 @@ input:hover .email__input-box {
 }
 
 .plan {
-  margin: 4rem 2rem 0 0;
+  /* margin: 4rem 2rem 0 0; */
+  margin: 0 auto;
+  margin-top: 4rem;
   width: calc(100% / 3);
   border-left: 1px solid rgb(226, 232, 240);
   border-top-left-radius: 8px;
@@ -764,7 +770,7 @@ input:hover .email__input-box {
 }
 
 .business {
-  margin: 4rem 2rem 0 0;
+  margin: 4rem 2rem 0 2rem;
   width: calc(100% / 3);
   background: linear-gradient(
     135deg,
@@ -999,7 +1005,6 @@ input:hover .email__input-box {
 }
 
 .path8__container {
-  
   opacity: 0.8;
   width: 320px;
   height: 320px;
@@ -1073,11 +1078,12 @@ input:hover .email__input-box {
 /* PREFOOTER */
 
 .prefooter__container {
+  width: 100%;
   position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100%;
+  margin: 0 auto;
   padding: 6.5rem 0;
   background-color: rgb(100, 21, 255);
   border-radius: 8px;
@@ -1092,11 +1098,15 @@ input:hover .email__input-box {
   font-size: 1.875rem;
   font-weight: 700;
   color: #f7fafc;
+  padding-left: 2rem;
 }
 
-.prefooter__btn--container {
+.prefooter__button--container {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .prefooter__btn--getstarted {
@@ -1104,7 +1114,6 @@ input:hover .email__input-box {
   height: 100%;
   border: none;
   border-radius: 9999px;
-  margin-right: 1rem;
   padding: 20px 40px;
   color: #f7fafc;
   background-color: #f56565;
@@ -1122,6 +1131,8 @@ input:hover .email__input-box {
 .prefooter__btn--contactus {
   border: none;
   background-color: transparent;
+  margin-right: 32px;
+  margin-bottom: 16px;
   border-radius: 9999px;
   border: 2px solid rgb(159, 172, 193);
   padding: 20px 40px;
@@ -1142,7 +1153,7 @@ input:hover .email__input-box {
 footer {
   background-color: #6415ff;
   width: 100%;
-  max-height: fit-content;
+  max-height: 60vh;
 }
 
 .column__container {
@@ -1279,9 +1290,8 @@ footer {
   height: 40vh;
   position: absolute;
   background-color: #f7fafc;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.5);
   top: 0;
   left: 0;
   right: 0;
@@ -1290,6 +1300,7 @@ footer {
   margin: 24px 16px;
   padding: 32px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   visibility: hidden;
@@ -1305,13 +1316,94 @@ footer {
   transform: translate(0);
 }
 
+.menu__btn-open {
+  margin-right: 16px;
+  visibility: hidden;
+  border: none;
+  background-color: transparent;
+  color: #6415ff;
+  cursor: pointer;
+}
+
+.menu__btn-close {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  transform: translateX(-24px) translateY(24px);
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.menu__btn-close:hover {
+  color: #6415ff;
+}
+
+.burger__links-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.burger__link-holder {
+  padding-bottom: 4px;
+  margin: 8px 0;
+}
+
+.burger__link-sign-up {
+  padding: 16px 32px;
+  margin-top: 32px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #f7fafc;
+  background-color: #6415ff;
+  border-radius: 9999px;
+  transition: all 300ms ease-in-out;
+}
+
+.burger__link-sign-up:hover {
+  filter: brightness(90%);
+}
+
+.burger__link-main {
+  font-size: 1.125rem;
+  transition: all 300ms ease-in-out;
+  margin: 16px 0;
+}
+
+.burger__link-main:hover {
+  color: rgb(100, 21, 255);
+}
+
 /* @media aka RESPONSIVE CSS */
 
 @media (max-width: 1000px) {
   .nav__links {
     display: none;
   }
+
+  .menu__btn-open {
+    visibility: visible;
+    opacity: 1;
+    border: none;
+    background-color: transparent;
+    color: #6415ff;
+    cursor: pointer;
+  }
+
+  .services {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 800px;
+  }
 }
 
 @media (max-width: 768px) {
+  
 }
