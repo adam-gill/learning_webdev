@@ -390,6 +390,14 @@ input:hover .email__input-box {
   text-align: left;
 }
 
+.quality__work-header {
+  font-size: 3rem;
+  text-align: left;
+  font-weight: 900;
+  letter-spacing: 0.025rem;
+  color: #243e63;
+}
+
 .description2 {
   font-size: 1.125rem;
   font-weight: 500;
@@ -466,6 +474,14 @@ input:hover .email__input-box {
   color: rgb(36, 62, 99);
 }
 
+.steps__header {
+  font-size: 3rem;
+  text-align: left;
+  font-weight: 900;
+  letter-spacing: 0.025rem;
+  color: #243e63;
+}
+
 .steps__description {
   margin-left: 1.5rem;
 }
@@ -495,6 +511,11 @@ input:hover .email__input-box {
 }
 
 /* VALUES */
+
+.values__text--container {
+  padding-left: 3rem;
+  width: 50%;
+}
 
 .dollar__sign {
   height: 1.25rem;
@@ -538,6 +559,14 @@ input:hover .email__input-box {
   margin-left: 0.75rem;
   font-size: 1.25rem;
   font-weight: 700;
+}
+
+.values__header {
+  font-size: 3rem;
+  text-align: left;
+  font-weight: 900;
+  letter-spacing: 0.025rem;
+  color: #243e63;
 }
 
 .value__description {
@@ -1405,5 +1434,123 @@ footer {
 }
 
 @media (max-width: 768px) {
-  
+  .starting__header {
+    width: 100%;
+    font-size: 1.875rem;
+    color: #1a202c;
+    text-align: center;
+  }
+
+  .starting__subheader {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .customers__para {
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 800;
+  }
+
+  .customers {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .getting__started-img {
+    width: 100%;
+    max-width: 512px;
+  }
+
+  .getting__started--text-section {
+    width: 100%;
+    max-width: 512px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .getting__started-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .description2 {
+    font-size: 1rem;
+  }
+
+  .text__half-quality-work {
+    width: 100%;
+    max-width: 295px;
+  }
+
+  .row__mod2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .quality__img--wrapper {
+    width: 100%;
+  }
+
+  .quality__work-header {
+    font-size: 2.25rem;
+    text-align: left;
+    font-weight: 900;
+    letter-spacing: 0.025rem;
+    color: #243e63;
+  }
+
+  .steps__header {
+    font-size: 2.25rem;
+    text-align: left;
+    font-weight: 900;
+    letter-spacing: 0.025rem;
+    color: #243e63;
+  }
+
+  .values__header {
+    font-size: 2.25rem;
+    text-align: left;
+    font-weight: 900;
+    letter-spacing: 0.025rem;
+    color: #243e63;
+  }
+
+  .values__text--container {
+    padding: 0;
+    width: 50%;
+  }
+
+  .value__title {
+    font-size: 1rem;
+  }
+
+  .value__description {
+    font-size: 0.875rem;
+  }
+
+  .value__box {
+    margin-bottom: 32px;
+  }
+
+  .plans {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .plan {
+    width: 100%;
+    max-width: 384px;
+  }
+
+  .business {
+    width: 100%;
+    max-width: 384px;
+    margin: 0 auto;
+    margin-top: 4rem;
+  }
 }
