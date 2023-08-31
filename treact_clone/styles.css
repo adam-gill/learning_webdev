@@ -211,25 +211,19 @@ a {
 }
 
 .email__input-box {
+  color: none;
+}
+
+.input {
   max-width: 480px;
   width: 100%;
   border-radius: 9999px;
   border: 2px solid rgb(226, 232, 240);
   font-weight: 500;
   font-size: 1.125rem;
-  display: flex;
+  padding: 1.25rem 11rem 1.25rem 2rem;
   font-size: 1rem;
-  transition: all 300ms ease-in-out;
-}
-
-.input {
-  background-color: transparent;
-  font-size: 1rem;
-  padding: 1.25rem 1rem 1.25rem 2rem;
-  width: 100%;
-  border: none;
-  outline: none;
-  color: rgb(36, 62, 99);
+  transition: all 300ms;
 }
 
 .input::placeholder {
@@ -238,6 +232,7 @@ a {
 }
 
 .input:focus {
+  border: 2px solid rgb(100, 21, 255);
   border-color: rgb(100, 21, 255);
 }
 
@@ -246,23 +241,22 @@ input:hover .email__input-box {
 }
 
 .get__started-btn {
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
   background-color: rgb(100, 21, 255);
-  height: 100%;
+  height: 52px;
+  width: 160px;
   color: white;
   font-weight: 700;
   font-size: 1rem;
   border-radius: 9999px;
-  width: 55%;
   border: none;
   padding: 1rem 0;
   margin: 0.5rem 0.5rem 0.5rem 0;
+  transform: translateX(195%) translateY(-127%);
   transition: all 300ms;
 }
 
@@ -1577,5 +1571,22 @@ footer {
     max-width: 384px;
     margin: 0 auto;
     margin-top: 4rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+  
+  .email__input-box {
+    display: flex;
+    flex-direction: column;
   }
 }
