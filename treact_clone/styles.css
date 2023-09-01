@@ -211,6 +211,8 @@ a {
 }
 
 .email__input-box {
+  width: 100%;
+  max-width: 448px;
   border-radius: 9999px;
   border: 2px solid rgb(226, 232, 240);
   height: fit-content;
@@ -237,12 +239,12 @@ a {
   font-weight: 500;
 }
 
-input:hover .email__input-box {
-  border-color: #742cff;
-}
-
 input:focus {
   outline: none;
+}
+
+.email__input-box:focus-within {
+  border-color: #742cff;
 }
 
 .get__started-btn {
@@ -372,6 +374,19 @@ input:focus {
 
 /* QUALITY WORK */
 
+.quality__work-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.quality__work-title {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
+}
+
 .text__half-quality-work {
   display: flex;
   flex-direction: column;
@@ -451,6 +466,12 @@ input:focus {
 
 /* STEPS */
 
+.steps__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .step__number {
   font-size: 2.25rem;
   font-weight: 600;
@@ -462,6 +483,13 @@ input:focus {
   display: flex;
   flex-direction: row;
   margin-top: 2rem;
+}
+
+.steps__title-main {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
 }
 
 .steps__title {
@@ -1504,7 +1532,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-  
   .description2 {
     font-size: 1rem;
   }
@@ -1582,53 +1609,164 @@ footer {
   }
 }
 
-
-
-
-
-
-
-
-
-
 @media (max-width: 640px) {
-
   .email__input-box {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     max-width: 448px;
+    height: fit-content;
+    border: none;
   }
 
   .get__started-btn {
-    position: unset;
     display: flex;
     overflow: hidden;
     transform: none;
     width: 100%;
     max-width: 448px;
-    height: 63.5px;
-    padding-top: 20px;  
+    height: 100%;
+    max-height: 63.5px;
+    padding-top: 20px;
     padding-bottom: 20px;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-top: 16px;
+    text-align: center;
   }
 
   .input {
     width: 100%;
     max-width: 448px;
     padding-right: 32px;
+    border-radius: 9999px;
+    border: 2px solid rgb(226, 232, 240);
+  }
+
+  .service__header {
+    font-size: 2.25rem;
+  }
+
+  .service__description {
+    font-size: 14px;
+  }
+
+  .service {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 352px;
+  }
+
+  .service__title {
+    text-align: center;
+  }
+
+  .service__description-text {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .description {
+    text-align: center;
+    width: 100%;
+    max-width: 352px;
+  }
+
+  .quality__work-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .quality__img--wrapper {
+    width: 80%;
+  }
+
+  .quality__work-header {
+    font-size: 1.875rem;
+    text-align: center;
+  }
+
+  .text__half-quality-work {
+    width: 100%;
+    max-width: 448px;
+    align-items: center;
+  }
+
+  .quality__work-title {
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  .description2 {
+    text-align: center;
+    font-size: 0.875rem;
+  }
+
+  .steps__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .steps__img--wrapper {
+    width: 80%;
+  }
+
+  .steps__header {
+    text-align: center;
+    font-size: 1.875rem;
+  }
+
+  .steps__text--container {
+    padding-left: 0;
+    width: 100%;
+    max-width: 448px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .step__number {
+    width: 100%;
+    text-align: center;
+  }
+
+  .step {
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+  }
+
+  .steps__title-main {
+    margin-top: 64px;
+  }
+
+  .steps {
+    justify-content: center;
+  }
+
+  .steps__title {
+    margin-top: 16px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .steps__description {
+    margin-left: 0;
+  }
+
+  .steps__description--para {
+    text-align: center;
   }
 }
 
-
-
-
-
-
-
-
-
 @media (max-width: 480px) {
-  
   .email__input-box {
     display: flex;
     flex-direction: column;

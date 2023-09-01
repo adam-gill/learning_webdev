@@ -167,8 +167,9 @@
                 Our templates are easy to setup, understand and customize. Fully
                 modular components with a variety of pages and components.
               </h5>
-              <div class="email__input-box">
+              <div id="input__container" class="email__input-box">
                 <input
+                  id="input"
                   type="text"
                   placeholder="Your E-mail Address"
                   class="input"
@@ -343,29 +344,32 @@
       </div>
 
       <div class="container">
-        <div class="row row__mod2">
-          <div class="text__half-quality-work">
-            <h5 class="features__title purple left">QUALITY WORK</h5>
-            <h2 class="quality__work-header margin__top left">
-              Designed & Developed by
-              <span class="purple__big">Professionals.</span>
-            </h2>
-            <p class="description2 left">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <a href="" class="learn__more-btn left">Learn More</a>
+        <div class="row">
+          <div class="quality__work-container">
+            <div class="text__half-quality-work">
+              <h5 class="quality__work-title purple left">QUALITY WORK</h5>
+              <h2 class="quality__work-header margin__top left">
+                Designed & Developed by
+                <span class="purple__big">Professionals.</span>
+              </h2>
+              <p class="description2 left">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <a href="" class="learn__more-btn left">Learn More</a>
+            </div>
+
+            <div class="quality__img--wrapper">
+              <img
+                src="https://treact.owaiskhan.me/static/media/hero-screenshot-1.40a097b525c2f8c9808e.png"
+                class="quality__work-img"
+                alt=""
+              />
+            </div>
           </div>
 
-          <div class="quality__img--wrapper">
-            <img
-              src="https://treact.owaiskhan.me/static/media/hero-screenshot-1.40a097b525c2f8c9808e.png"
-              class="quality__work-img"
-              alt=""
-            />
-          </div>
           <div class="path3__container">
             <svg
               viewBox="0 0 1280 1280"
@@ -382,7 +386,7 @@
       </div>
 
       <div class="container">
-        <div class="row row__mod2">
+        <div class="row steps__container">
           <div class="steps__img--wrapper">
             <img
               src="https://treact.owaiskhan.me/static/media/hero-screenshot-2.241aac1fbc66db29d873.png"
@@ -396,7 +400,7 @@
             </svg>
           </div>
           <div class="steps__text--container">
-            <h5 class="features__title purple left">STEPS</h5>
+            <h5 class="steps__title-main purple left">STEPS</h5>
             <h2 class="steps__header margin__top left">
               Easy to
               <span class="purple__big">Get Started.</span>
