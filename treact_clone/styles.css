@@ -537,6 +537,13 @@ input:focus {
 
 /* VALUES */
 
+.values__title {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
+}
+
 .values__text--container {
   padding-left: 3rem;
   width: 50%;
@@ -847,6 +854,22 @@ input:focus {
 }
 
 /* TESTIMONIAL */
+
+.test__header {
+  font-size: 3rem;
+  text-align: left;
+  font-weight: 900;
+  letter-spacing: 0.025rem;
+  color: #243e63;
+  margin-top: 0;
+}
+
+.testimonial__title {
+  text-align: left;
+  font-size: 16px;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
+}
 
 .testimonial__text--section {
   display: flex;
@@ -1764,6 +1787,114 @@ footer {
   .steps__description--para {
     text-align: center;
   }
+
+  .input:focus-within {
+    border-color: #742cff;
+  }
+
+  .row__mod2 {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .steps__img {
+    width: 100%;
+  }
+
+  .steps__img--wrapper {
+    width: 100%;
+    max-width: 448px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .values__title {
+    text-align: center;
+  }
+
+  .values__header {
+    font-size: 30px;
+    width: 100%;
+    max-width: 448px;
+    text-align: center;
+  }
+
+  .values__text--container {
+    width: 100%;
+    max-width: 448px;
+    align-items: center;
+  }
+
+  .description2 {
+    margin-top: 36px;
+  }
+
+  .value__box {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .value {
+    margin-right: 0;
+    width: 100%;
+    max-width: 448px;
+  }
+
+  .values__title {
+    margin-top: 32px;
+  }
+
+  .value__header {
+    justify-content: center;
+  }
+
+  .value__description {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    font-size: 16px;
+    margin: 0 auto;
+    margin-top: 16px;
+  }
+
+  .value__title {
+    font-size: 20px;
+  }
+
+  .learn__more-btn {
+    margin: 0 auto;
+  }
+
+  .row__mod4 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial__text--section {
+    padding-left: 0;
+  }
+
+  .testimonial__img--wrapper {
+    width: 100%;
+    max-width: 448px;
+  }
+
+  .testimonial__title {
+    text-align: center;
+    margin-top: 32px;
+  }
+
+  .test__header {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .testimonial__text--section {
+    width: 100%;
+    max-width: 448px;
+  }
+  
 }
 
 @media (max-width: 480px) {
