@@ -119,10 +119,7 @@
 //     }
 // ]
 
-
-
 // console.log(users[1].lessonsCompleted.map(elem => elem *2))
-
 
 // function login(email, password) {
 //     for (let i = 0; i < users.length; i++) {
@@ -137,7 +134,7 @@
 //             }
 //             return
 //         }
-        
+
 //     }
 //     console.log('could not find match')
 // }
@@ -156,25 +153,106 @@
 // DOM
 
 //first way & best practice
-console.log(document.querySelector('#title'))
+// console.log(document.querySelector('#title'))
+
+// // second way
+// console.log(document.getElementById('title'))
+
+// // change HTML
+// document.querySelector('#title').innerHTML = 'Dodo Bird'
+
+// // Change CSS
+// document.querySelector(".title").style.color = 'red'
+
+// // event listener
+
+// function changeTitleColor() {
+//     document.querySelector(".title").style.color = 'blue'
+// }
+
+// function dark() {
+//     document.querySelector('body').classList.toggle('dark-theme')
+// }
+
+// PROMISES = something that gives you a
+// value some time in the future
+
+// use case = logging in, registering, payments, etc.
+// communicating to backend server
+// used when need to use data front backend (database)
+
+// front end uses the promise, back end creates it
+
+// doesn't load data correctly
+// console.log(fetch("https://jsonplaceholder.typicode.com/users/1"))
+
+// unlock data with 1. then
+
+// const emailRef = document.querySelector(".email");
+// //console.log(emailRef)
+
+// fetch("https://jsonplaceholder.typicode.com/users/1")
+//   .then((response) => {
+//     // console.log(response.json())
+
+//     // to unlock promise method 1
+//     // response.json().then(data =>  {
+//     //     emailRef.innerHTML = data.email
+//     // })
+
+//     //method 2: just return (shorthand)
+//     // promise that allows data to be read
+//     return response.json();
+//   }) // second .then unlocks data
+//   .then((data) => {
+//     console.log(data)
+//     emailRef.innerHTML = data.email
+//   });
+// doesn't wait, runs in background, data out of order
 
 
-// second way
-console.log(document.getElementById('title'))
+// callback statement ^
 
-// change HTML
-document.querySelector('#title').innerHTML = 'Dodo Bird'
+// or with 2. async/await = best practice ***
+
+// async function
+// async function main() {
+//     const response = await fetch("https://jsonplaceholder.typicode.com/users/1")
+    
+//     // unlock promise
+//     const data = await response.json()
+//     console.log(data)
+// }
+// // runs line by line; better to use
+
+// // have to call function for data also
+// main()
 
 
-// Change CSS
-document.querySelector(".title").style.color = 'red'
 
-// event listener
+// Create a PROMISE
+// callback = () => {}
 
-function changeTitleColor() {
-    document.querySelector(".title").style.color = 'blue'
+function getSubStatus() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("VIP")
+        }, 2000)
+        
+    })
 }
 
-function dark() {
-    document.querySelector('body').classList.toggle('dark-theme')
+// Method 1 (then)
+getSubStatus().then(response => console.log(response))
+
+// Method 2 (async function & await)
+// async function to unlock promise
+async function main () {
+    console.log(await getSubStatus())
 }
+
+// make sure to call main() to view data
+main()
+
+// 22:15
+
