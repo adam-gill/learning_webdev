@@ -1,3 +1,8 @@
+// EASY CHALLANGES
+
+
+
+
 // q1: function that takes two args and returns thier sum
 
 // function sum(x, y) {
@@ -106,10 +111,208 @@
 // console.log(eoro(4))
 
 
-// q13: check if user logged in and subbed
+// q13: check if user logged in or subbed
 
-function logandsub(login, sub) {
-    return login === "LOGGED_IN" && sub === "SUBSCRIBED"
-}
+// function logandsub(login, sub) {
+//     return login === "LOGGED_IN" || sub === "SUBSCRIBED"
+// }
 
-console.log(logandsub("LOGGED_IN", "SUBSCRIBED"))
+// console.log(logandsub("LOGGED_IN", "SUBSCRIBED"))
+
+
+
+
+// MEDIUM CHALLANGES
+
+
+
+
+// q1: falsy or truthy
+
+// function fort(val1, val2) {
+//     return (!val1) ? val1 : val2
+// }
+
+// console.log(fort(false, 100))
+
+
+// q2: return array length 
+
+// function arrlen(arr) {
+//     return arr.length
+// }
+
+// console.log(arrlen([1, 2, 3, 4, 5]))
+
+
+// q3: last array element 
+
+// function lastelm(arr) {
+//     return arr[arr.length - 1]
+// }
+
+// console.log(lastelm([1, 2, 3, 4, 99]))
+
+
+// q4: sum of array 
+
+// function arraySum(arr) {
+//     let sum = 0
+//     for (let i = 0; i < arr.length; i++) {
+//         sum += arr[i]
+//     }
+//     return sum
+// }
+
+// console.log(arraySum([1, 2, 3, 4, 99]))
+
+
+// q5: add up nums from a single number
+
+// function numSum(num) {
+//     sum = 0
+//     for (let i = 0; i < num; i++) {
+//         sum += i + 1
+//     }   
+//     return sum
+// }
+
+// console.log(numSum(7))
+
+
+// q6: calc time
+
+// function calcTime(sec) {
+//     let minutes = Math.floor(sec / 60)
+//     let seconds = sec % 60
+
+//     if (minutes > 9) {
+//         return minutes + ":" + seconds
+//     } else {
+//         return "0" + minutes + ":" + seconds
+//     }
+    
+// }
+
+// console.log(calcTime(5000))
+
+
+// q7: largest num in array
+
+// function largest(arr) {
+//     let max = arr[0]
+
+//     for(i = 1; i < arr.length; i++) {
+//         if (arr[i] > max) {
+//             max = arr[i]
+//         }
+//     }
+//     return max
+// }   
+
+// console.log(largest([-1, -2, 4, -11, 500, 23, 9]))
+
+
+// q8: reverse a string
+
+// function rev(str) {
+//     res = ""
+
+//     // increment
+//     // for (i = str.length - 1; i >= 0; i--) {
+//     //     res += str[i]
+//     // }
+
+//     // decrement
+//     // for (i = 0; i < str.length; i++) {
+//     //     res += str[str.length - 1 - i]
+//     // }
+
+//     // 'string'.split('').reverse().join('') to reverse string
+
+//     // shortcut using split, reverse, and join
+//     // split makes string into an array
+//     res = str.split('').reverse().join('')
+
+//     return res
+// }
+
+// console.log(rev("Hello"))
+
+
+// q9: turn every element in array to 0
+
+// function all0(arr) {
+
+//     // for loop
+//     // let newArr = []
+//     // for (i = 0; i < arr.length; i++) {
+//     //     newArr.push(0)
+//     // }
+//     // return newArr
+
+//     // fill method
+//     // return new Array(arr.length).fill(0)
+
+//     // map callback function method *most important*
+//     let newArr = arr.map(() => 0)
+
+//     // let newArr = arr.map(() => {
+//     //     return 0
+//     // })
+//     return newArr
+// }
+
+// console.log(all0([-1, -2, 4, -11, 500, 23, 9]))
+
+
+// q10: filter out apples
+
+// function noApples(arr) {
+
+//     // for loop method
+//     // let newArr = []
+
+//     // for(i = 0; i < arr.length; i++) {
+//     //     if (arr[i] !== 'Apple') {
+//     //         newArr.push(arr[i])
+//     //     }
+//     // }
+//     // return newArr
+
+//     // filter method
+//     return arr.filter((elem) => elem !== 'Apple')
+     
+// }
+
+// console.log(noApples(['Banana', 'Apple', 'Orange', 'Apple', 'Banana']))
+
+
+// q11: filter falsy values
+
+// function filterFalsy(arr) {
+    
+//     // determine if truthy = !!elem === true or !!elem
+//     return arr.filter((elem) => !!elem)
+// }
+
+// console.log(filterFalsy(['Banana', 6, NaN, undefined, null, false, 0]))
+
+
+// q12: truthy to true, falsy to false
+
+// function tttftf(arr) {
+//     return arr.map((elem) => !!elem)
+// }
+
+// console.log(tttftf([500, 0, 'David', "", []]))
+
+
+
+
+// ADVANCED CHALLANGES
+
+
+
+
+// q1:
