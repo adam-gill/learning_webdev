@@ -210,7 +210,6 @@
 //   });
 // doesn't wait, runs in background, data out of order
 
-
 // callback statement ^
 
 // or with 2. async/await = best practice ***
@@ -218,7 +217,7 @@
 // async function
 // async function main() {
 //     const response = await fetch("https://jsonplaceholder.typicode.com/users/1")
-    
+
 //     // unlock promise
 //     const data = await response.json()
 //     console.log(data)
@@ -228,31 +227,53 @@
 // // have to call function for data also
 // main()
 
-
-
 // Create a PROMISE
 // callback = () => {}
 
+
+
+const statusRef = document.querySelector(".status");
+const videoRef = document.querySelector(".video")
+
 function getSubStatus() {
     return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve("VIP")
-        }, 2000)
-        
-    })
-}
+      setTimeout(() => {
+        resolve("VIP");
+      }, 2000);
+    });
+  }
 
 // Method 1 (then)
-getSubStatus().then(response => console.log(response))
+// getSubStatus().then((response) => console.log(response));
 
 // Method 2 (async function & await)
 // async function to unlock promise
-async function main () {
-    console.log(await getSubStatus())
+
+function getVideo(subStatus) {
+  return new Promise((resolve, reject) => {
+    if (subStatus === "VIP") {
+      resolve("show video");
+    } else if (subStatus === "FREE") {
+      resolve("show trailer");
+    } else {
+      reject("no video");
+    }
+  });
+}
+
+async function main() {
+  const status = await getSubStatus();
+  statusRef.innterHTML = status
+  videoRef.innerHTML = await getVideo(status)
+
+  try {
+    console.log(await getVideo(status))
+  }
+  catch (e) {
+    console.log(e)
+    videoRef.innerHTML = e
+  }
 }
 
 // make sure to call main() to view data
-main()
-
-// 22:15
-
+main();
