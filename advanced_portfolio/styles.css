@@ -30,6 +30,17 @@ section {
     background-color: rgb(245, 245, 245);
 }
 
+.container {
+    padding: 50px 0;
+}
+
+.row {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
 body {
     background-color: rgb(245, 245, 245);
 } 
@@ -99,7 +110,7 @@ nav {
 
 /* LANDING PAGE */
 
-#landing__page {
+#landing-page {
     min-height: 100vh;
 }
 
@@ -189,4 +200,30 @@ nav {
     }
 }
 
-/* Projects section 44:47 */
+
+
+
+
+
+
+/* PROJECTS */
+
+#projects {
+    display: flex;
+}
+
+.section__title {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 60px;
+}
+
+.project__img {
+    width: 100%;
+}
+
+.project__wrapper {
+    position: relative;
+}
+
+/* 52:54 */
