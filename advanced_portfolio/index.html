@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/AG-logos_white.png" type="png" />
     <link rel="stylesheet" href="styles.css" />
+
     <script
       src="https://kit.fontawesome.com/c8e4d183c2.js"
       crossorigin="anonymous"
@@ -15,7 +17,7 @@
     <section id="landing-page">
       <nav>
         <figure>
-          <img id="personal-logo" src="./assets/logo.png" alt="" />
+          <img id="personal-logo" src="./assets/AG-logos_white.png" alt="" />
         </figure>
         <ul class="nav__link-list">
           <li class="nav__link">
@@ -86,6 +88,56 @@
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">
+            Here's a bit about me.
+          </h3>
+          <h4 class="modal__sub-title--about"></h4>
+          <p class="modal__para">
+            I'm a 19 year old aspiring
+            <span class="blue">software engineer</span> eager to build
+            <span class="blue">applications</span> to make peoples' lives more
+            <span class="blue">convient</span> and
+            <span class="blue">streamlined</span>.
+            <br />
+            <br />
+
+            I am currently studying
+            <span class="blue">computer science</span> with a minor in
+            <span class="blue">mathematics</span>, and also building
+            <span class="blue">advanced software projects</span> that require
+            real-world skill.
+          </p>
+
+          <div class="modal__languages">
+            <img
+              class="modal__language--img"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+              alt=""
+            />
+
+            <img
+              class="modal__language--img"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+              alt=""
+            />
+
+            <img
+              class="modal__language--img"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+              alt=""
+            />
+
+            <img
+              class="modal__language--img"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="modal__half modal__contact">Let's talk!</div>
+      </div>
     </section>
 
     <section id="projects">
@@ -115,8 +167,16 @@
                   </p>
                   <div class="project__description--links">
                     <a
+                      href="https://github.com/adam-gill/learning_webdev/tree/main/treact_clone"
+                      class="project__description--link"
+                      target="_blank"
+                    >
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a
                       href="https://adam-gill.github.io/learning_webdev/treact_clone/"
                       class="project__description--link"
+                      target="_blank"
                     >
                       <i class="fas fa-link"></i>
                     </a>
@@ -128,5 +188,49 @@
         </div>
       </div>
     </section>
+    <footer>
+      <div class="container footer__container">
+        <div class="row footer__row">
+          <figure>
+            <img
+              class="footer__logo-img"
+              src="./assets/AG-logos_white.png"
+              alt=""
+            />
+          </figure>
+          <div class="footer__social--list">
+            <a
+              href="https://github.com/adam-gill"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              target="_blank"
+            >
+              Github
+            </a>
+            <a
+              href="https://www.linkedin.com/in/adam-gill-614346264/"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              target="_blank"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="#"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              target="_blank"
+            >
+              Contact
+            </a>
+            <a
+              href="./assets/Resume.pdf"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              target="_blank"
+            >
+              Resume
+            </a>
+          </div>
+          <div class="footer__copyright">Copyright &copy; 2023 Adam Gill</div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
