@@ -93,7 +93,9 @@
           <h3 class="modal__title modal__title--about">
             Here's a bit about me.
           </h3>
-          <h4 class="modal__sub-title--about"></h4>
+          <h4 class="modal__sub-title">
+            Aspiring Full-Stack Software Enginner
+          </h4>
           <p class="modal__para">
             I'm a 19 year old aspiring
             <span class="blue">software engineer</span> eager to build
@@ -111,32 +113,102 @@
           </p>
 
           <div class="modal__languages">
-            <img
-              class="modal__language--img"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
-              alt=""
-            />
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+                alt=""
+              />
+              <span class="language">JavaScript</span>
+            </figure>
 
-            <img
-              class="modal__language--img"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
-              alt=""
-            />
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
+                alt=""
+              />
+              <span class="language">React</span>
+            </figure>
 
-            <img
-              class="modal__language--img"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
-              alt=""
-            />
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+                alt=""
+              />
+              <span class="language">CSS</span>
+            </figure>
 
-            <img
-              class="modal__language--img"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
-              alt=""
-            />
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                alt=""
+              />
+              <span class="language">HTMl</span>
+            </figure>
+
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-512/free-python-2-226051.png?f=avif&w=256"
+                alt=""
+              />
+              <span class="language">Python</span>
+            </figure>
+
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-512/free-java-59-1174952.png?f=avif&w=256"
+                alt=""
+              />
+              <span class="language">Java</span>
+            </figure>
+
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/c.svg" alt="" />
+              <span class="language">C++</span>
+            </figure>
+
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/cc.svg" alt="" />
+              <span class="language">C</span>
+            </figure>
           </div>
         </div>
-        <div class="modal__half modal__contact">Let's talk!</div>
+        <div class="modal__half modal__contact">
+          <h3 class="modal__title modal__title--contact">Let's talk!</h3>
+          <h4 class="modal__sub-title modal__subtitle--contact">
+            I'm eager to become apart of a great team.
+          </h4>
+          <form id="contact__form" action="">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input type="text" name="user_name" class="input" required />
+            </div>
+
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input type="email" name="user_email" class="input" required />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea
+                type="text"
+                name="message"
+                class="input"
+                required
+              ></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">Send it my way!</button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i> 
+            <!-- 1:47:30 -->
+          </div>
+        </div>
       </div>
     </section>
 
