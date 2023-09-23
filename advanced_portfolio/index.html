@@ -12,6 +12,17 @@
     ></script>
     <script src="index.js"></script>
     <title>Adam Gill</title>
+    
+    <script src="index.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("VJJJ44OmvL3UOF4J0");
+      })();
+    </script>
   </head>
   <body>
     <section id="landing-page">
@@ -183,7 +194,7 @@
           <h4 class="modal__sub-title modal__subtitle--contact">
             I'm eager to become apart of a great team.
           </h4>
-          <form id="contact__form" action="">
+          <form id="contact__form" onsubmit="contact(event)">
             <div class="form__item">
               <label class="form__item--label">Name</label>
               <input type="text" name="user_name" class="input" required />
@@ -202,13 +213,18 @@
                 required
               ></textarea>
             </div>
-            <button id="contact__submit" class="form__submit">Send it my way!</button>
+            <button id="contact__submit" class="form__submit">
+              Send it my way!
+            </button>
           </form>
           <div class="modal__overlay modal__overlay--loading">
-            <i class="fas fa-spinner"></i> 
-            <!-- 1:47:30 -->
+            <i class="fas fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thank you for the message! I look forward to speaking with you!
           </div>
         </div>
+        <i class="fas fa-times modal__exit click"></i>
       </div>
     </section>
 
