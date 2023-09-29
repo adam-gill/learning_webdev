@@ -22,4 +22,18 @@ function contact(event) {
         })
 }
 
-// 2:08:46
+let isModalOpen = false
+
+
+// toggal modal
+function toggleModal() {
+
+    if (isModalOpen) {
+        isModalOpen = false
+        return document.body.classList.remove("modal--open")
+        
+    }
+
+    isModalOpen = true
+    document.body.classList += " modal--open"
+}
