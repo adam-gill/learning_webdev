@@ -103,10 +103,12 @@ body {
   margin-bottom: 12px;
   text-align: left;
   line-height: 1;
+  z-index: 999;
 }
 
 .blue {
   color: #00b0ff;
+  z-index: 1;
 }
 
 .link__hover-effect {
@@ -157,7 +159,7 @@ nav,
   transition: all 600ms 300ms;
 }
 
-.modal__open nav,
+.modal--open nav,
 .modal--open .scroll,
 .modal--open .header {
   opacity: 0;
@@ -337,6 +339,10 @@ nav {
   display: flex;
   width: 100%;
   justify-content: center;
+}
+
+.project {
+  margin-bottom: 72px;
 }
 
 .section__title {
@@ -643,7 +649,7 @@ footer {
   position: fixed;
   width: 16px;
   height: 16px;
-  z-index: 1;
+  z-index: 0;
 }
 
 .triangle {
