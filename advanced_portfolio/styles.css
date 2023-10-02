@@ -9,6 +9,10 @@
   font-family: "JetBrains Mono", monospace;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 li {
   list-style-type: none;
 }
@@ -28,6 +32,7 @@ button {
 
 section {
   background-color: rgb(245, 245, 245);
+  transition: all 300ms ease;
 }
 
 input {
@@ -144,6 +149,54 @@ body {
   transform: scale(0.8);
 }
 
+nav,
+.scroll,
+.header {
+  opacity: 1;
+  visibility: visible;
+  transition: all 600ms 300ms;
+}
+
+.modal__open nav,
+.modal--open .scroll,
+.modal--open .header {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 400ms;
+}
+
+.dark-theme .title,
+.dark-theme .section__title,
+.dark-theme .section__sub-title,
+.dark-theme .nav__link--anchor,
+.dark-theme .fa-adjust,
+.dark-theme .header__para {
+  color: white;
+}
+
+.dark-theme section {
+  background-color: #242424;
+}
+
+.dark-theme #personal-logo {
+  filter: none;
+}
+
+.dark-theme .scroll__icon {
+  border-color: white;
+}
+
+.dark-theme .scroll__icon:after,
+.dark-theme .link__hover-effect--black:after {
+  background-color: white;
+}
+
+.dark-theme .mail__btn {
+  background-color: white;
+  color: #242424;
+}
+
+
 /* NAV */
 
 #personal-logo {
@@ -232,9 +285,11 @@ nav {
   border: none;
   background-color: #242424;
   color: white;
-  position: absolute;
+  position: fixed;
   bottom: 32px;
   right: 40px;
+  z-index: 100;
+  box-shadow: 0 12px 30px 0 rgb(0, 0, 0, .5);
 }
 
 .fa-envelope {
@@ -288,6 +343,7 @@ nav {
   text-align: center;
   font-size: 48px;
   margin-bottom: 60px;
+  z-index: 100;
 }
 
 .project__img {
@@ -360,6 +416,7 @@ nav {
 /* FOOTER */
 
 footer {
+  position: relative;
   background-color: #242424;
   display: flex;
   padding: 6% 0;
@@ -423,10 +480,8 @@ footer {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  transition: all 300ms ease;
+  transition: all 300ms ease-in-out;
 }
-
-/* 2:18:56 contact box doesn't transition out */
 
 .modal--open .modal__about, 
 .modal--open .modal__contact {
@@ -469,14 +524,14 @@ footer {
   transition: all 300ms ease;
 }
 
-.modal__language--img {
-  width: 100%;
-}
-
 .modal__contact {
+  transform: translateX(110%);
   background-color: #242424;
   color: white;
-  transform: translateX(110%);
+}
+
+.modal__language--img {
+  width: 100%;
 }
 
 .modal__title {
@@ -512,7 +567,7 @@ footer {
   width: 100%;
   max-width: 240px;
   padding: 12px 24px;
-  transition: all 300ms ease;
+  transition: all 300ms ease-in;
 }
 
 .form__submit:active {
@@ -577,3 +632,122 @@ footer {
   font-size: 36px;
   z-index: 100;
 }
+
+
+
+
+
+/* SHAPES */
+
+.shape {
+  position: fixed;
+  width: 16px;
+  height: 16px;
+  z-index: 1;
+}
+
+.triangle {
+  transform: rotate(-45deg);
+}
+
+.shape--0 {
+  top: 15vh;
+  left: 5vw;
+}
+.shape--1 {
+  top: 15vh;
+  left: 50vw;
+}
+.shape--2 {
+  top: 15vh;
+  left: 80vw;
+}
+.shape--3 {
+  top: 50vh;
+  left: 5vw;
+}
+.shape--4 {
+  top: 50vh;
+  left: 50vw;
+}
+.shape--5 {
+  top: 50vh;
+  left: 80vw;
+}
+.shape--6 {
+  top: 80vh;
+  left: 5vw;
+}
+.shape--7 {
+  top: 80vh;
+  left: 50vw;
+}
+.shape--8 {
+  top: 80vh;
+  left: 80vw;
+}
+
+
+
+/* Tablets and large phones */
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 80px;
+  }
+
+  .header__para {
+    font-size: 20px;
+  }
+
+  .modal {
+    top: 0;
+    left: 0;
+    height: auto;
+    transform: none;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .modal__half {
+    width: 100%;
+  }
+}
+
+
+
+/* Small phones */
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 52px;
+  }
+
+  .header__para {
+    font-size: 18px;
+  }
+
+  .nav__link:first-child {
+    display: none;
+  }
+
+  .project__description--para {
+    display: none;
+  }
+
+  .project__description {
+    left: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .project__description--sub-title {
+    margin-bottom: 8px;
+  }
+
+  .modal__half {
+    padding: 40px;
+  }
+}
+
