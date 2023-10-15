@@ -385,6 +385,11 @@ a:hover {
   font-size: 36px;
 }
 
+.books__section {
+  min-height: 100vh;
+  flex: 1;
+}
+
 .books__header {
   display: flex;
   justify-content: space-between;
@@ -503,7 +508,9 @@ select {
 
 footer {
   background-color: #242424;
-  width: 100%
+  width: 100%;
+  position: relative;
+  bottom: 0;
 }
 
 .footer__logo--img {
@@ -529,6 +536,39 @@ footer {
   padding: 0 8px;
   margin-bottom: 24px;
   margin-right: 8px;
+}
+
+/* SPINNER */
+
+.books__loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  transform: translateY(-200px);
+  padding-top: 60px;
+  font-size: 60px;
+  color: #1769d2;
+}
+
+.books__loading--spinner {
+  display: none !important;
+}
+
+.books__loading .books__loading--spinner {
+  display: block !important;
+}
+
+.fa-spinner {
+  animation: rotate 600ms infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  } 100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* PHONES/TABLETS */

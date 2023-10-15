@@ -20,13 +20,13 @@
       <nav>
         <div class="nav__container">
           <div class="logo__holder">
-            <a href="#">
+            <a href="./index.html">
               <img src="./assets/book.svg" class="logo" alt="" />
             </a>
             <h5 class="logo__text">e-lib</h5>
           </div>
           <ul class="nav__links">
-            <li><a href="#" class="nav__link">Home</a></li>
+            <li><a href="./index.html" class="nav__link">Home</a></li>
             <li><a href="#" class="nav__link">Contact</a></li>
             <li><a href="#" class="nav__link nav__link--primary">Books</a></li>
           </ul>
@@ -57,7 +57,7 @@
       </nav>
     </section>
 
-    <main id="books__main">
+    <main id="books__main" class="books__section">
       <section>
         <div class="container">
           <div class="row">
@@ -72,8 +72,8 @@
                 <option value="RATING">Rating</option>
               </select>
             </div>
-            <div class="books">
-
+            <div class="books books__loading">
+              <i class="fas fa-spinner books__loading--spinner"></i>
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@
       <div class="container">
         <div class="row row__column">
           <div class="logo__holder--white">
-            <a href="#">
+            <a href="./index.html">
               <img src="./assets/book2.svg" class="logo white" alt="" />
             </a>
             <h5 class="logo__text--white">e-lib</h5>
