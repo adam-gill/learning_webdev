@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blurred Image</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden; /* Hide overflow to prevent scrollbars */
+      }
+
+      .blurred-image {
+        width: 100vw; /* Make the image span the full width of the viewport */
+        height: 100vh; /* Make the image span the full height of the viewport */
+        object-fit: cover; /* Ensure the image covers the entire container */
+        filter: blur(20px); /* Apply a blur effect to the image */
+        position: fixed; /* Fixed position to prevent scrolling */
+        z-index: -1; /* Place the image behind other content */
+      }
+
+      .content {
+        padding: 20px;
+        color: white;
+        text-align: center;
+        position: relative;
+        z-index: 1; /* Place content above the blurred image */
+      }
+
+      .gradient-div {
+        width: 100%; /* Set the width of the div */
+        height: 200px; /* Set the height of the div */
+        background: linear-gradient(
+          to right,
+          white,
+          black
+        ); /* Use a linear gradient from white to black */
+        transition: background 0.5s ease; /* Apply a smooth transition effect on the background property */
+      }
+
+      
+    </style>
+  </head>
+
+  <body>
+    <img
+      class="blurred-image"
+      src="./assets/movie_background.jpg"
+      alt="Blurred Background Image"
+    />
+    <div class="content">
+      <!-- Your content goes here -->
+      <h1>Hello, World!</h1>
+      <p>This is some content on top of the blurred image.</p>
+    </div>
+    <div class="gradient-div"></div>
+  </body>
+</html>
