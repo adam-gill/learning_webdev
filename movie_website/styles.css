@@ -52,6 +52,7 @@ nav {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding: 24px;
 }
 
 .blur__container {
@@ -226,6 +227,10 @@ input:focus {
 
 /* MOVIES */
 
+#movies {
+  padding: 24px;
+}
+
 .movies__container {
   display: flex;
   flex-direction: row;
@@ -263,6 +268,9 @@ input:focus {
 }
 
 .poster__half {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
@@ -274,12 +282,18 @@ input:focus {
 .text__half {
   display: flex;
   flex-direction: column;
-  width: 86%;
+  text-align: center;
+  width: 100%;
 }
 
 .movie__title {
+  width: 100%;
   padding-top: 16px;
   padding-bottom: 8px;
+}
+
+.movie__year {
+  width: 100%;
 }
 
 
@@ -406,5 +420,66 @@ footer {
   align-items: center;
   justify-content: center;
   padding-bottom: 24px;
+}
+
+@media (max-width: 1450px) {
+  .movie {
+    width: 33%;
+  }
+
+  .input__wrapper {
+    width: 70%;
+  }
+
+  .movies__title {
+    padding-left: 48px
+  }
+}
+
+@media (max-width: 1050px) {
+
+  .input__wrapper {
+    width: 65%;
+  }
+
+  .nav__links {
+    justify-content: end;
+  }
+
+  .link {
+    font-size: 24px;
+  }
+
+  .logo__text {
+    font-size: 24px;
+  }
+
+  .movies__title {
+    font-size: 36px;
+  }
+
+  #contact {
+    display: none;
+  }
+
+  #search__btn {
+    display: none;
+  }
+
+  .search__title {
+    font-size: 48px;
+  }
+
+  input {
+    font-size: 24px;
+  }
+
+  .movie {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  
 }
 
