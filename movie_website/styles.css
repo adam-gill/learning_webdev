@@ -251,6 +251,7 @@ input:focus {
   flex-direction: column;
   justify-content: space-between;
   width: 25%;
+  height: min-content;
   padding-bottom: 36px;
   transition: all 300ms ease-in-out;
 }
@@ -264,13 +265,19 @@ input:focus {
   width: 100%;
 }
 
+.poster__img {
+  width: 300px;
+  height: 450px;
+}
+
 .text__half {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 86%;
 }
 
 .movie__title {
+  padding-top: 16px;
   padding-bottom: 8px;
 }
 

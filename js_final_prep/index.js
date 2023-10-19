@@ -1,10 +1,13 @@
 // API 1: "https://jsonplaceholder.typicode.com/users"
-// API 2: "https://jsonplaceholder.typicode.com/posts?userId=:7"
+// API 2: "https://jsonplaceholder.typicode.com/posts?userId=7"
 
 async function main() {
     const users = await fetch("https://jsonplaceholder.typicode.com/users");
     const usersData = await users.json();
     const userListEl = document.querySelector(".user-list");
+
+    console.log(usersData);
+
     userListEl.innerHTML = usersData.map((user) => userHTML(user)).join("");
 
     
