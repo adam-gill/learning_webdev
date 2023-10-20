@@ -364,6 +364,10 @@ input:focus {
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
@@ -516,6 +520,48 @@ footer {
 
   .search__title {
     font-size: 36px;
+  }
+}
+
+@media (max-width: 580px) {
+  .input__wrapper {
+    width: 90%;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  .nav__links {
+    width: 100%;
+    justify-content: end;
+  }
+
+  .logo__text--container {
+    width: 60%;
+    justify-content: start;
+  }
+
+  .link {
+    margin: 0;
+    width: 60%;
+  }
+
+  .link--btn {
+    width: 100px;
+    padding: 8px 18px;
+  }
+
+  .nav__links {
+    width: 40%;
+  }
+
+  .svg__holder {
+    padding-right: 8px;
+  }
+
+  .search__title, .movies__title {
+    font-size: 24px;
   }
 }
 
