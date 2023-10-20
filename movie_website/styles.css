@@ -191,6 +191,7 @@ input {
   border: none;
   color: #242424;
   font-size: 36px;
+  z-index: 100;
 }
 
 input:focus {
@@ -480,6 +481,41 @@ footer {
 }
 
 @media (max-width: 768px) {
-  
+  input {
+    font-size: 18px;
+    height: 75px;
+    padding-left: 16px;
+    margin-right: 16px;
+  }
+
+  .svg__holder {
+    width: 35px;
+  }
+
+  .magnifying__glass {
+    width: 35px;
+    height: 35px;
+  }
+
+  .movie {
+    width: 100%;
+  }
+
+  .movies__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .logo__img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .search__title {
+    font-size: 36px;
+  }
 }
 
