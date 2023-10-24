@@ -60,7 +60,7 @@ if (searchIcon) {
 if (searchBox) {
     searchBox.addEventListener("keyup", function(event) {
         if (event.key === "Enter") {
-            const searchValue = searchBox.value.split(" ");
+            const searchValue = searchBox.value.trim().split(" ");
             moviesTitle.textContent = `Results for "${searchBox.value}":`;
 
             moviesLoading.classList += ' movies__loading';
@@ -91,7 +91,6 @@ async function getMovies(searchText, searchTextValue) {
     const moviesList = moviesData.Search.slice(0, 6);
     const moviesContainer = document.querySelector('.movies__container');
 
-    console.log(moviesList);
 
     moviesLoading.classList.remove('movies__loading');
 
