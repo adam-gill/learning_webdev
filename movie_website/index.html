@@ -50,6 +50,8 @@
             placeholder="Search for Movies by Title"
           />
 
+
+
           <div class="svg__holder">
             <svg
               class="magnifying__glass"
@@ -65,6 +67,13 @@
           </div>
         </div>
       </div>
+      
+      <select class="dropdown" id="filter" onchange="filterMovies(event)">
+        <option value="" disabled selected>Filter</option>
+        <option value="NEW">Newest</option>
+        <option value="OLD">Oldest</option>
+        <option value="RATING">Rating</option>
+      </select>
     </section>
 
     <section id="movies">

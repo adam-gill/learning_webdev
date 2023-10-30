@@ -1,3 +1,4 @@
+// various html elements involved with displaying the movies
 const searchButton = document.getElementById("search__button");
 const searchBox = document.getElementById("search__box");
 const searchIcon = document.querySelector(".svg__holder");
@@ -9,6 +10,9 @@ const featuredMoviesIMDBID = [
   "tt0144084",
   "tt0114369",
 ];
+
+// variable to track movies currently loaded on the screen
+let loadedMovies = [];
 
 // load in featured movies by imdbID that I selected
 async function getFeaturedMovies() {
@@ -47,18 +51,20 @@ if (searchButton) {
 
 // if magnifying glass is clicked, looks up search
 if (searchIcon) {
-  searchIcon.addEventListener("click", function () {
-    const searchValue = searchBox.value.split(" ");
-    moviesTitle.textContent = `Results for "${searchBox.value}":`;
+    searchIcon.addEventListener("click", function () {
+    const searchValue = searchBox.value.trim().split(" ");
 
-    moviesLoading.classList += " movies__loading";
-    const moviesContainer = document.querySelector(".movies__container");
-    moviesContainer.innerHTML = "";
+    if (searchValue[0] !== "") {
+      moviesTitle.textContent = `Results for "${searchBox.value}":`;
+      moviesLoading.classList += " movies__loading";
+      const moviesContainer = document.querySelector(".movies__container");
+      moviesContainer.innerHTML = "";
 
-    // getMovies(searchValue, searchBox.value);
-    setTimeout(() => {
-      getMovies(searchValue, searchBox.value);
-    }, 200); // api loads too fast to see loading state
+      // getMovies(searchValue, searchBox.value);
+      setTimeout(() => {
+        getMovies(searchValue, searchBox.value);
+      }, 200); // api loads too fast to see loading state
+    }
   });
 }
 
@@ -67,15 +73,19 @@ if (searchBox) {
   searchBox.addEventListener("keyup", function (event) {
     if (event.key === "Enter") {
       const searchValue = searchBox.value.trim().split(" ");
-      moviesTitle.textContent = `Results for "${searchBox.value}":`;
+      
+      // stop search if search box is empty
+      if (searchValue[0] !== "") {
+        moviesTitle.textContent = `Results for "${searchBox.value}":`;
 
-      moviesLoading.classList += " movies__loading";
-      const moviesContainer = document.querySelector(".movies__container");
-      moviesContainer.innerHTML = "";
-      // getMovies(searchValue, searchBox.value);
-      setTimeout(() => {
-        getMovies(searchValue, searchBox.value);
-      }, 200);
+        moviesLoading.classList += " movies__loading";
+        const moviesContainer = document.querySelector(".movies__container");
+        moviesContainer.innerHTML = "";
+        // getMovies(searchValue, searchBox.value);
+        setTimeout(() => {
+          getMovies(searchValue, searchBox.value);
+        }, 200);
+      }
     }
   });
 }
@@ -112,7 +122,7 @@ async function getMovies(searchText, searchTextValue) {
     }
     // const moviesData = await movies.json();
     const moviesList = movies.Search.slice(0, 6);
-  
+    loadedMovies = moviesList;
   
   
 
@@ -133,6 +143,12 @@ async function getMovies(searchText, searchTextValue) {
   moviesContainer.innerHTML += moviesList
     .map((movie) => moviesHTML(movie))
     .join("");
+}
+
+function filterMovies(event) {
+  const filter = event.target.value;
+
+  // sort loadedMovies list by filter and refresh movies
 }
 
 async function fetchMovies(searchString) {
