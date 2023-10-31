@@ -245,7 +245,7 @@ function moviesHTML(movie, isFeatured) {
   const rating = `- ${movie.imdbRating}/10`;
 
   return `<div class="movie" data-hidden-data="${movie.imdbID}">
-                <div class="poster__half">
+                <div class="poster__half no-cursor">
                 <img
                     src="${movie.Poster}"
                     alt=""
