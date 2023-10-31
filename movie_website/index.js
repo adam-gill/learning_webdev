@@ -4,15 +4,17 @@ const searchBox = document.getElementById("search__box");
 const searchIcon = document.querySelector(".svg__holder");
 const moviesTitle = document.querySelector(".movies__title");
 const moviesLoading = document.querySelector(".movies");
+const dropDown = document.querySelector(".dropdown");
 const featuredMoviesIMDBID = [
-  "tt0137523",
-  "tt2872718",
-  "tt0144084",
-  "tt0114369",
+  "fight+club",
+  "nightcrawler",
+  "american+psycho",
+  "se7en",
 ];
 
 // variable to track movies currently loaded on the screen
 let loadedMovies = [];
+let searchTerm = "Featured Movies";
 
 // load in featured movies by imdbID that I selected
 async function getFeaturedMovies() {
@@ -21,17 +23,21 @@ async function getFeaturedMovies() {
 
   for (let i = 0; i < featuredMoviesIMDBID.length; i++) {
     let movie = await fetch(
-      `https://www.omdbapi.com/?apikey=61e2ff59&i=${featuredMoviesIMDBID[i]}`
+      `https://www.omdbapi.com/?apikey=61e2ff59&s=${featuredMoviesIMDBID[i]}`
     );
     const movieData = await movie.json();
-    featuredMoviesData.push(movieData);
+    featuredMoviesData.push(movieData.Search[0]);
   }
+  console.log(featuredMoviesData);
+
+  loadedMovies = featuredMoviesData;
+  searchTerm = "Featured Movies";
 
   moviesLoading.classList.remove("movies__loading");
   const moviesContainer = document.querySelector(".movies__container");
   moviesContainer.innerHTML = moviesHeadingHTML("Featured Movies");
   moviesContainer.innerHTML += featuredMoviesData
-    .map((movie) => moviesHTML(movie))
+    .map((movie) => moviesHTML(movie, true))
     .join("");
 }
 
@@ -51,11 +57,16 @@ if (searchButton) {
 
 // if magnifying glass is clicked, looks up search
 if (searchIcon) {
-    searchIcon.addEventListener("click", function () {
+  searchIcon.addEventListener("click", function () {
     const searchValue = searchBox.value.trim().split(" ");
 
     if (searchValue[0] !== "") {
       moviesTitle.textContent = `Results for "${searchBox.value}":`;
+      searchTerm = searchBox.value;
+
+      // reset dropdown value once user searches for movie
+      dropDown.selectedIndex = 0;
+
       moviesLoading.classList += " movies__loading";
       const moviesContainer = document.querySelector(".movies__container");
       moviesContainer.innerHTML = "";
@@ -73,12 +84,16 @@ if (searchBox) {
   searchBox.addEventListener("keyup", function (event) {
     if (event.key === "Enter") {
       const searchValue = searchBox.value.trim().split(" ");
-      
+
       // stop search if search box is empty
       if (searchValue[0] !== "") {
         moviesTitle.textContent = `Results for "${searchBox.value}":`;
+        searchTerm = searchBox.value;
 
-        moviesLoading.classList += " movies__loading";
+        // reset dropdown value once user searches for movie
+        dropDown.selectedIndex = 0;
+
+        moviesLoading.classList += " movies__loading";  
         const moviesContainer = document.querySelector(".movies__container");
         moviesContainer.innerHTML = "";
         // getMovies(searchValue, searchBox.value);
@@ -99,32 +114,31 @@ async function getMovies(searchText, searchTextValue) {
     }
   }
 
-    // const movies = await fetch(
-    //   `https://www.omdbapi.com/?apikey=61e2ff59&${searchString}`
-    // );
+  // const movies = await fetch(
+  //   `https://www.omdbapi.com/?apikey=61e2ff59&${searchString}`
+  // );
 
-    const moviesContainer = document.querySelector(".movies__container");
+  const moviesContainer = document.querySelector(".movies__container");
 
-    const movies = await fetchMovies(`https://www.omdbapi.com/?apikey=61e2ff59&${searchString}`);
-    console.log(movies)
+  const movies = await fetchMovies(
+    `https://www.omdbapi.com/?apikey=61e2ff59&${searchString}`
+  );
 
-    // show error if input is something like 'e' which is too many requests, or request isn't found
-    if (movies.Response === "False") {
-        moviesLoading.classList.remove("movies__loading");
-        moviesContainer.innerHTML = moviesHeadingHTML(searchTextValue);
-        moviesContainer.innerHTML += `
+  // show error if input is something like 'e' which is too many requests, or request isn't found
+  if (movies.Response === "False") {
+    moviesLoading.classList.remove("movies__loading");
+    moviesContainer.innerHTML = moviesHeadingHTML(searchTextValue);
+    moviesContainer.innerHTML += `
                                         <div class="not__found--container">
                                             <img class="not__found--img" src="./assets/movie_not_found.png"><br>
                                             <h1 class="not__found--title">No results for "${searchTextValue}"</h1>
                                         </div>`;
 
-        return;
-    }
-    // const moviesData = await movies.json();
-    const moviesList = movies.Search.slice(0, 6);
-    loadedMovies = moviesList;
-  
-  
+    return;
+  }
+  // const moviesData = await movies.json();
+  const moviesList = movies.Search.slice(0, 6);
+  loadedMovies = moviesList;
 
   moviesLoading.classList.remove("movies__loading");
 
@@ -141,18 +155,65 @@ async function getMovies(searchText, searchTextValue) {
 
   moviesContainer.innerHTML = moviesHeadingHTML(searchTextValue);
   moviesContainer.innerHTML += moviesList
-    .map((movie) => moviesHTML(movie))
+    .map((movie) => moviesHTML(movie, false))
     .join("");
 }
 
-function filterMovies(event) {
+// sort movies by year released or rating on change
+async function filterMovies(event) {
   const filter = event.target.value;
+
+  // start loading state
+  const moviesContainer = document.querySelector(".movies__container");
+
+  moviesLoading.classList += " movies__loading";
+  moviesContainer.innerHTML = "";
+
+  setTimeout(async () => {
+    if (filter === "OLD") {
+      loadedMovies.sort((a, b) => parseFloat(a.Year) - parseFloat(b.Year));
+    } else if (filter === "NEW") {
+      loadedMovies.sort((a, b) => parseFloat(b.Year) - parseFloat(a.Year));
+    } else if (filter === "RATING") {
+      
+      // array to allow to sort by rating
+      let expandedDataMovies = [];
+
+      const loadedIDBMIDS = loadedMovies.map((movie) => movie.imdbID)
+      console.log(loadedIDBMIDS);
+
+      for (let i = 0; i < loadedIDBMIDS.length; i ++) {
+        const movieData = await fetch(`https://www.omdbapi.com/?apikey=61e2ff59&i=${loadedIDBMIDS[i]}`);
+        const movie = await movieData.json();
+
+        expandedDataMovies.push(movie);
+      }
+
+      // sort movies by their imdbRating
+      expandedDataMovies.sort((a, b) => parseFloat(b.imdbRating) - parseFloat(a.imdbRating));
+      loadedMovies = expandedDataMovies;
+      console.log(loadedMovies);
+    }
+
+  
+    // change movies to order by filter
+    moviesContainer.innerHTML = moviesHeadingHTML(searchTerm);
+  
+    // remove loading state
+    moviesLoading.classList.remove("movies__loading");
+  
+    moviesContainer.innerHTML += loadedMovies
+      .map((movie) => moviesHTML(movie, false))
+      .join("");
+  }, 200); // api loads too fast to see loading state
+
+  
 
   // sort loadedMovies list by filter and refresh movies
 }
 
 async function fetchMovies(searchString) {
-    const controller = new AbortController();
+  const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), 5000); // Set a timeout of 5 seconds
 
   try {
@@ -164,7 +225,7 @@ async function fetchMovies(searchString) {
     clearTimeout(timeoutId); // Clear the timeout since the request completed within 5 seconds
 
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error("Network response was not ok");
     }
 
     const movies = await response.json();
@@ -176,10 +237,12 @@ async function fetchMovies(searchString) {
   }
 }
 
-function moviesHTML(movie) {
+function moviesHTML(movie, isFeatured) {
   if (movie.Poster === "N/A") {
     movie.Poster = "./assets/img_not_found.jpg";
   }
+
+  const rating = `- ${movie.imdbRating}/10`;
 
   return `<div class="movie" data-hidden-data="${movie.imdbID}">
                 <div class="poster__half">
@@ -190,7 +253,7 @@ function moviesHTML(movie) {
                 </div>
                 <div class="text__half">
                 <h1 class="movie__title">${movie.Title}</h1>
-                <h3 class="year">${movie.Year}</h3>
+                <h3 class="year">${movie.Year} ${(rating === "- undefined/10" || isFeatured === true) ? "": rating}</h3>
                 </div>
             </div>`;
 }
